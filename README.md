@@ -1,7 +1,7 @@
 
 # olca2tidas
 
-将 openLCA 导出的 JSON-LD 一键转换为 **TIDAS / eILCD** 风格 JSON（便于导入天工数据库）、并输出认证清单。    本工具在您的原始转换脚本基础上，封装为 `pip` 可安装、带 CLI、支持日志输出。
+将 openLCA 导出的 JSON-LD 一键转换为 **TIDAS / eILCD** 风格 JSON（便于导入天工数据库）、并输出认证清单。    本工具已封装为 `pip` 可安装、带 CLI、支持日志输出。具体使用指南如下：
 
 
 ---
@@ -57,28 +57,7 @@ python -m olca2tidas.converter --src "/path/to/JSON-LD" --out "/path/to/Result"
 - `data/flows/*.json`, `data/processes/*.json`, `data/lifecyclemodels/*.json`（覆盖保存后的 ILCD/TIDAS JSON）
 - `convert_manifest.json`：包含转换数量、SHA256 校验与结构验证结果
 
-## 5) 开发&发布
 
-- 运行测试：
-  ```bash
-  pytest -q
-  ```
-
-- 本地构建：
-  ```bash
-  python -m pip install --upgrade build
-  python -m build
-  ```
-
-- 发布到 PyPI：
-  ```bash
-  python -m pip install --upgrade build twine
-  python -m build
-  python -m twine upload dist/*
-  ```
-
-- GitHub Actions 自动发布：打 tag（如 `v0.1.0`）后自动构建并上传（需在仓库 Secrets 中设置 `PYPI_API_TOKEN`）。
-
-## 6) 许可
+## 5) 许可
 
 MIT License © Qilin Cao
