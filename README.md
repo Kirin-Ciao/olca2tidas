@@ -1,7 +1,7 @@
 
 # olca2tidas
 
-将 openLCA 导出的 JSON-LD（含 ecoinvent 风格）一键转换为 **TIDAS / eILCD** 风格 JSON（便于导入天工数据库）、并输出认证清单。    本工具在您的原始转换脚本基础上，封装为 `pip` 可安装、带 CLI、支持日志输出。
+将 openLCA 导出的 JSON-LD 一键转换为 **TIDAS / eILCD** 风格 JSON（便于导入天工数据库）、并输出认证清单。    本工具在您的原始转换脚本基础上，封装为 `pip` 可安装、带 CLI、支持日志输出。
 
 
 ---
@@ -15,17 +15,17 @@ pip install olca2tidas
 或者从源码安装：
 
 ```bash
-git clone https://github.com/<your-username>/olca2tidas.git
+git clone https://github.com/Kirin-Ciao/olca2tidas.git
 cd olca2tidas
 pip install -e .
 ```
 
-## 2) 快速开始（两种等价方式）
+## 2) 快速开始
 
 ### 方式 A：使用包装后的命令 `olca2tidas`（推荐）
 ```bash
 # Windows 示例（注意路径需要引号）
-olca2tidas -- --src "E:\openLCA\tiangong\JPN_2020" --out "E:\openLCA\tiangong\Result"
+olca2tidas -- --src "E:\openLCA\tiangong\<your-file>" --out "E:\openLCA\tiangong\Result"
 
 # 同时把控制台输出保存到日志文件：
 olca2tidas --log-file logs/run-$(date +%Y%m%d-%H%M%S).log -- --src "C:\data\JSON-LD" --out "C:\data\Result"
