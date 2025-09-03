@@ -22,8 +22,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/<your-username>/olca2tidas"
-Repository = "https://github.com/<your-username>/olca2tidas"
+Homepage = "https://github.com/Kirin-Ciao/olca2tidas"
+Repository = "https://github.com/Kirin-Ciao/olca2tidas"
 
 [project.scripts]
 olca2tidas = "olca2tidas.cli:run"
