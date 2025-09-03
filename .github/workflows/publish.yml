@@ -16,7 +16,18 @@ jobs:
           python-version: "3.11"
       - run: python -m pip install --upgrade pip build
       - run: python -m build
+      - name: Inspect wheel METADATA
+        run: |
+          python - <<'PY'
+          import glob, zipfile
+          w = sorted(glob.glob('dist/*.whl'))[-1]
+          z = zipfile.ZipFile(w)
+          meta = [n for n in z.namelist() if n.endswith('.dist-info/METADATA')][0]
+          print("WHEEL:", w)
+          print(z.read(meta).decode('utf-8'))
+          PY
       - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@v1.8.14
+        uses: pypa/gh-action-pypi-publish@v1.9.5
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
+          skip-existing: true
