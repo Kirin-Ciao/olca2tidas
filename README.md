@@ -1,7 +1,7 @@
 
 # olca2tidas
 
-将 openLCA 导出的 JSON-LD（含 ecoinvent 风格）一键转换为 **TIDAS / eILCD** 风格 JSON（便于导入天工数据库）、并输出认证清单。    本工具在您的原始转换脚本基础上，封装为 `pip` 可安装、带 CLI、支持日志输出。
+将 openLCA 导出的 JSON-LD 一键转换为 **TIDAS / eILCD** 风格 JSON（便于导入天工数据库）、并输出认证清单。    本工具在您的原始转换脚本基础上，封装为 `pip` 可安装、带 CLI、支持日志输出。
 
 
 ---
