@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "olca2tidas"
-version = "0.1.0"
-description = "Convert openLCA JSON-LD (e.g., ecoinvent exports) into TIDAS/eILCD-style JSON ready for TianGong LCA."
+version = "0.1.1"
+description = "Convert openLCA JSON-LD to TIDAS/eILCD JSON for TianGong LCA database"
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
