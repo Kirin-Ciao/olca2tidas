@@ -8,11 +8,12 @@
 
 ## 1) 安装
 
-```Windows（PowerShell）
+###Windows（PowerShell）
+```
 py -m pip install -U olca2tidas
 ```
-
-```macOS / Linux
+###macOS / Linux
+```
 python3 -m pip install -U olca2tidas
 ```
 
